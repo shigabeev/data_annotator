@@ -15,8 +15,8 @@ app = Flask(__name__)
 app.config['DOGS_FOLDER'] = DOGS_FOLDER
 app.config['SKL_FOLDER'] = SKL_FOLDER
 
-IMPATH_FULL = '/Users/frappuccino/dev/Data annotator/static/dog-validataion-images/'
-SKLPATH_FULL = '/Users/frappuccino/dev/Data annotator/static/dog-validation-skeletons/'
+IMPATH_FULL = os.path.abspath('static/dog-validataion-images/')
+SKLPATH_FULL = os.path.abspath('static/dog-validation-skeletons/')
 
 all_imgs = pd.Series([x.split('/')[-1].split('.')[0] for x in os.listdir(SKLPATH_FULL)])
 
